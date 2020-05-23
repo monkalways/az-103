@@ -1,0 +1,5 @@
+az role definition create --role-definition ./vmoperator.json
+
+az role definition list --name "Virtual Machine Operator"
+
+az role definition delete --name "Virtual Machine Operator"

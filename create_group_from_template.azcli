@@ -1,0 +1,5 @@
+az group delete --name jmeter
+
+az group create --name jmeter --location "East US"
+
+az group deployment create --name jmeterDeploy1 --resource-group jmeter --template-file template.json --parameters parameters.json

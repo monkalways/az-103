@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "adminUsername": {
+      "value": "wei.wei"
+    },
+    "adminPassword": {
+      "value": "!Edmonton123"
+    },
+    "adminEmail": {
+      "value": "wei.wei@gov.ab.ca"
+    }
+  }
+}

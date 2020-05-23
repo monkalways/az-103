@@ -1,0 +1,9 @@
+# az login
+
+az policy definition create --name 'enforce-tag-value' --display-name 'Enforce tag and its value' --description 'Enforces a required tag and its value.' --rules 'https://raw.githubusercontent.com/Azure/azure-policy/master/samples/built-in-policy/enforce-tag-value/azurepolicy.rules.json' --params 'https://raw.githubusercontent.com/Azure/azure-policy/master/samples/built-in-policy/enforce-tag-value/azurepolicy.parameters.json' --mode All
+
+az policy assignment create --name 'azsjdassign' --scope '/subscriptions/fb73aa7a-074b-49f0-a865-d2207199f325' --policy 'enforce-tag-value' --params '{ "tagName": "billingcode", "tagValue": "az101-9009" }'
+
+az policy assignment delete --name "Enforce tag and its value"
+
+az policy definition delete --name 'enforce-tag-value'
